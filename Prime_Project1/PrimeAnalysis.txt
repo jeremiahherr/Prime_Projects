@@ -1,0 +1,306 @@
+Output 1.
+
+	Call:
+	lm(formula = primes)
+
+	Residuals:
+	      Min        1Q    Median        3Q       Max 
+	-28033214   -304503   -117510    265645   4162861 
+
+	Coefficients:
+	              Estimate Std. Error t value Pr(>|t|)    
+	(Intercept) -1.561e+08  1.197e+06 -130.33   <2e-16 ***
+	nth          1.776e+01  5.031e-03 3530.11   <2e-16 ***
+	order        1.586e+07  9.443e+04  167.93   <2e-16 ***
+	prop         9.524e+08  9.654e+06   98.65   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 698300 on 9996 degrees of freedom
+	Multiple R-squared:  0.9994,	Adjusted R-squared:  0.9994 
+	F-statistic: 5.803e+06 on 3 and 9996 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 2.
+
+	Call:
+	lm(formula = prop ~ order, data = primes)
+
+	Residuals:
+	      Min        1Q    Median        3Q       Max 
+	-0.000870  0.000067  0.000067  0.000067  0.056284 
+
+	Coefficients:
+	              Estimate Std. Error t value Pr(>|t|)    
+	(Intercept)  1.226e-01  1.303e-04   941.0   <2e-16 ***
+	order       -9.437e-03  1.894e-05  -498.3   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 0.0007289 on 9998 degrees of freedom
+	Multiple R-squared:  0.9613,	Adjusted R-squared:  0.9613 
+	F-statistic: 2.483e+05 on 1 and 9998 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 3.
+
+	Call:
+	lm(formula = prop ~ poly(order, 5), data = primes)
+
+	Residuals:
+	       Min         1Q     Median         3Q        Max 
+	-1.399e-13 -5.000e-17 -5.000e-17 -5.000e-17  5.452e-13 
+
+	Coefficients:
+	                  Estimate Std. Error    t value Pr(>|t|)    
+	(Intercept)      5.778e-02  5.634e-17  1.026e+15   <2e-16 ***
+	poly(order, 5)1 -3.632e-01  5.634e-15 -6.447e+13   <2e-16 ***
+	poly(order, 5)2  6.924e-02  5.634e-15  1.229e+13   <2e-16 ***
+	poly(order, 5)3 -2.242e-02  5.634e-15 -3.980e+12   <2e-16 ***
+	poly(order, 5)4  3.918e-03  5.634e-15  6.955e+11   <2e-16 ***
+	poly(order, 5)5 -3.085e-04  5.634e-15 -5.476e+10   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 5.634e-15 on 9994 degrees of freedom
+	Multiple R-squared:      1,	Adjusted R-squared:      1 
+	F-statistic: 8.649e+26 on 5 and 9994 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 4.
+
+	Analysis of Variance Table
+
+	Model 1: prop ~ order
+	Model 2: prop ~ poly(order, 5)
+	  Res.Df       RSS Df Sum of Sq          F    Pr(>F)    
+	1   9998 0.0053122                                      
+	2   9994 0.0000000  4 0.0053122 4.1845e+25 < 2.2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+
+Output 5.
+
+	Call:
+	lm(formula = primes ~ nth, data = primes)
+
+	Residuals:
+	     Min       1Q   Median       3Q      Max 
+	-6923258  -492013   164703  1486084  3952687 
+
+	Coefficients:
+	             Estimate Std. Error t value Pr(>|t|)    
+	(Intercept) 6.045e+06  4.460e+04   135.5   <2e-16 ***
+	nth         1.856e+01  1.615e-02  1149.7   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 2525000 on 9998 degrees of freedom
+	Multiple R-squared:  0.9925,	Adjusted R-squared:  0.9925 
+	F-statistic: 1.322e+06 on 1 and 9998 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 6.
+
+	Call:
+	lm(formula = primes ~ order + prop, data = primes)
+
+	Residuals:
+	       Min         1Q     Median         3Q        Max 
+	-147274573  -19509418   -2059217   19626519   46181375 
+
+	Coefficients:
+	              Estimate Std. Error t value Pr(>|t|)    
+	(Intercept) -851436253   41718303  -20.41   <2e-16 ***
+	order         87716631    3257033   26.93   <2e-16 ***
+	prop        5145489275  338406457   15.21   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 24660000 on 9997 degrees of freedom
+	Multiple R-squared:  0.284,	Adjusted R-squared:  0.2839 
+	F-statistic:  1983 on 2 and 9997 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 7.
+
+	Analysis of Variance Table
+
+	Model 1: primes ~ nth
+	Model 2: primes ~ order + prop
+	  Res.Df        RSS Df   Sum of Sq F Pr(>F)
+	1   9998 6.3766e+16                        
+	2   9997 6.0816e+18  1 -6.0179e+18    
+
+
+
+
+Output 8.
+
+	Call:
+	lm(formula = primes ~ order * prop, data = primes)
+
+	Residuals:
+	      Min        1Q    Median        3Q       Max 
+	-91646718 -19727667   -217578  19231161  45963126 
+
+	Coefficients:
+	              Estimate Std. Error t value Pr(>|t|)    
+	(Intercept) -3.741e+10  3.087e+09  -12.12   <2e-16 ***
+	order        1.639e+08  7.200e+06   22.76   <2e-16 ***
+	prop         6.764e+10  5.288e+09   12.79   <2e-16 ***
+	order:prop   8.199e+10  6.924e+09   11.84   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 24490000 on 9996 degrees of freedom
+	Multiple R-squared:  0.2939,	Adjusted R-squared:  0.2937 
+	F-statistic:  1387 on 3 and 9996 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 9.
+
+	Model 1: primes ~ order + prop
+	Model 2: primes ~ order * prop
+	  Res.Df        RSS Df  Sum of Sq      F    Pr(>F)    
+	1   9997 6.0816e+18                                   
+	2   9996 5.9975e+18  1 8.4135e+16 140.23 < 2.2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+
+Output 10.
+
+	Call:
+	lm(formula = primes ~ poly(order * prop, 5), data = primes)
+
+	Residuals:
+	      Min        1Q    Median        3Q       Max 
+	-44045153 -19749659    -28244  19201420  45933385 
+
+	Coefficients:
+	                        Estimate Std. Error t value Pr(>|t|)    
+	(Intercept)            4.831e+07  2.447e+05 197.398  < 2e-16 ***
+	poly(order * prop, 5)1 1.389e+09  2.447e+07  56.738  < 2e-16 ***
+	poly(order * prop, 5)2 5.778e+08  2.447e+07  23.608  < 2e-16 ***
+	poly(order * prop, 5)3 4.427e+08  2.447e+07  18.089  < 2e-16 ***
+	poly(order * prop, 5)4 2.091e+08  2.447e+07   8.543  < 2e-16 ***
+	poly(order * prop, 5)5 7.701e+07  2.447e+07   3.147  0.00166 ** 
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 24470000 on 9994 degrees of freedom
+	Multiple R-squared:  0.2952,	Adjusted R-squared:  0.2949 
+	F-statistic: 837.3 on 5 and 9994 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 11.
+
+	Analysis of Variance Table
+
+	Model 1: primes ~ order * prop
+	Model 2: primes ~ poly(order * prop, 5)
+	  Res.Df        RSS Df  Sum of Sq     F    Pr(>F)    
+	1   9996 5.9975e+18                                  
+	2   9994 5.9865e+18  2 1.0981e+16 9.166 0.0001054 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+
+Output 12.
+
+	Analysis of Variance Table
+
+	Model 1: primes ~ nth
+	Model 2: primes ~ poly(order * prop, 5)
+	  Res.Df        RSS Df   Sum of Sq F Pr(>F)
+	1   9998 6.3766e+16                        
+	2   9994 5.9865e+18  4 -5.9227e+18     
+
+
+
+
+Output 13.
+
+	Call:
+	lm(formula = nth ~ order * prop, data = primes)
+
+	Residuals:
+	     Min       1Q   Median       3Q      Max 
+	-4156163 -1099834     5955  1091916  2554572 
+
+	Coefficients:
+	              Estimate Std. Error t value Pr(>|t|)    
+	(Intercept) -1.703e+09  1.742e+08  -9.776   <2e-16 ***
+	order        7.514e+06  4.063e+05  18.494   <2e-16 ***
+	prop         3.081e+09  2.984e+08  10.324   <2e-16 ***
+	order:prop   3.732e+09  3.907e+08   9.552   <2e-16 ***
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 1382000 on 9996 degrees of freedom
+	Multiple R-squared:  0.2195,	Adjusted R-squared:  0.2192 
+	F-statistic: 936.8 on 3 and 9996 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 14.
+
+	Call:
+	lm(formula = nth ~ poly(order * prop, 5), data = primes)
+
+	Residuals:
+	     Min       1Q   Median       3Q      Max 
+	-2542362 -1100741     1484  1090571  2553227 
+
+	Coefficients:
+	                       Estimate Std. Error t value Pr(>|t|)    
+	(Intercept)             2276890      13814 164.820  < 2e-16 ***
+	poly(order * prop, 5)1 64518845    1381440  46.704  < 2e-16 ***
+	poly(order * prop, 5)2 26722085    1381440  19.344  < 2e-16 ***
+	poly(order * prop, 5)3 20297162    1381440  14.693  < 2e-16 ***
+	poly(order * prop, 5)4  9512276    1381440   6.886 6.09e-12 ***
+	poly(order * prop, 5)5  3475180    1381440   2.516   0.0119 *  
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+	Residual standard error: 1381000 on 9994 degrees of freedom
+	Multiple R-squared:  0.2204,	Adjusted R-squared:   0.22 
+	F-statistic:   565 on 5 and 9994 DF,  p-value: < 2.2e-16
+
+
+
+
+Output 15.
+
+	Analysis of Variance Table
+
+	Model 1: nth ~ order * prop
+	Model 2: nth ~ poly(order * prop, 5)
+	  Res.Df        RSS Df  Sum of Sq      F   Pr(>F)   
+	1   9996 1.9095e+16                                 
+	2   9994 1.9072e+16  2 2.2487e+13 5.8916 0.002772 **
+	---
+	Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
