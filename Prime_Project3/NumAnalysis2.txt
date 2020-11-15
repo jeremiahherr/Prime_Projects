@@ -1,0 +1,88 @@
+Output 1
+
+	table(tree.pred,test$prime)
+	         
+	tree.pred    N    Y
+	        N 8967 1033
+	        Y    0    0
+
+	mean(tree.pred!=test$prime)
+	[1] 0.1033
+
+
+
+Output 2
+
+	table(prune.pred,test$prime)
+	          
+	prune.pred    N    Y
+	         N 8967 1033
+	         Y    0    0
+
+	mean(prune.pred!=test$prime)
+	[1] 0.1033
+
+
+
+Output 3
+
+	table(bag.pred,test$prime)
+	        
+	bag.pred    N    Y
+	       N 8954 1022
+	       Y   13   11
+
+	mean(bag.pred!=test$prime)
+	[1] 0.1035
+
+
+
+Output 4
+
+	table(rf.pred,test$prime)
+	       
+	rf.pred    N    Y
+	      N 8967 1033
+	      Y    0    0
+
+	mean(rf.pred!=test$prime)
+	[1] 0.1033
+
+
+
+Output 5
+
+	table(svc.pred,test$prime)
+	        
+	svc.pred    N    Y
+	       N 8967 1033
+	       Y    0    0
+
+	mean(svc.pred!=test$prime)
+	[1] 0.1033
+
+
+
+Output 6
+
+	table(svm1.pred,test$prime)
+	         
+	svm1.pred    N    Y
+	        N 8967 1033
+	        Y    0    0
+
+	mean(svm1.pred!=test$prime)
+	[1] 0.1033
+
+
+
+Output 7
+
+	table(svm2.pred,test$prime)
+	         
+	svm2.pred    N    Y
+	        N 3851   60
+	        Y 5116  973
+
+	mean(svm2.pred!=test$prime)
+	[1] 0.5176
