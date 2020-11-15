@@ -1,0 +1,82 @@
+Output 1
+
+  kfold.glm(10)
+     
+         N    Y
+    N 8776  869
+    Y  354    1
+  [1] 0.1223
+
+
+Output 2
+
+  kfold.lda(10)
+          
+  lda.pred    N    Y
+         N 8783 1212
+         Y    3    2
+  [1] 0.1215
+
+
+Output 3
+
+  kfold.qda(23)
+          
+  qda.pred    N    Y
+         N 5046    2
+         Y 3768 1189
+  [1] 0.3768116
+
+
+Output 4
+
+  kfold.knn(10,1)
+          
+  knn.pred    N    Y
+         N 8058 1212
+         Y  728    2
+  [1] 0.194
+
+
+Output 5
+
+  kfold.knn(10,3)
+          
+  knn.pred    N    Y
+         N 8741 1214
+         Y   45    0
+  [1] 0.1259
+
+
+Output 6
+
+  kfold.knn(10,5)
+          
+  knn.pred    N    Y
+         N 8756 1214
+         Y   30    0
+  [1] 0.1244
+
+
+Output 7
+
+  kfold.knn(10,10)
+          
+  knn.pred    N    Y
+         N 8785 1214
+         Y    1    0
+  [1] 0.1215
+
+
+Output 8
+
+  kfold.ridge(10)
+  [1] 8784 1102          
+  [1] 0.1216
+
+
+Output 9
+
+  kfold.lasso(10)
+  [1] 8784 1102          
+  [1] 0.1216
